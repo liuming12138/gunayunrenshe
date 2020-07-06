@@ -4,7 +4,160 @@
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "灌云人社仲裁",
-				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/arbitr_note/arbitr_note",
+			"style": {
+				"navigationBarTitleText": "仲裁须知",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/note_dec/note_dec",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/police_note/police_note",
+			"style": {
+				"navigationBarTitleText": "管辖须知",
+				"onReachBottomDistance": 0
+			}
+		}, 
+		{
+			"path": "pages/case/case",
+			"style": {
+				"navigationBarTitleText": "我的案件",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/case_dec/case_dec",
+			"style": {
+				"navigationBarTitleText": "案件详情",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-0",
+			"style": {
+				"navigationBarTitleText": "使用说明",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-1",
+			"style": {
+				"navigationBarTitleText": "灌云人社监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-2",
+			"style": {
+				"navigationBarTitleText": "监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-3",
+			"style": {
+				"navigationBarTitleText": "监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-4",
+			"style": {
+				"navigationBarTitleText": "监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-5",
+			"style": {
+				"navigationBarTitleText": "监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/monitor/monitor-6",
+			"style": {
+				"navigationBarTitleText": "监察投诉",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr",
+			"style": {
+				"navigationBarTitleText": "灌云人社仲裁",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-1",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-2",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-3",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-4",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-5",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-6",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-7",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
+				"onReachBottomDistance": 0
+			}
+		},
+		{
+			"path": "pages/contr/contr-8",
+			"style": {
+				"navigationBarTitleText": "个人争议申请",
 				"onReachBottomDistance": 0
 			}
 		}

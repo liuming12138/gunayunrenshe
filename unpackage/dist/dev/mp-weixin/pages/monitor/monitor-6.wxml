@@ -1,0 +1,1 @@
+<view><view class="app-1"><image src="../../static/img/monitor/7.png" mode></image><text>投诉完成</text></view><view class="btn"><view data-event-opts="{{[['tap',[['formSubmit',['$event']]]]]}}" bindtap="__e">返回首页</view></view></view>

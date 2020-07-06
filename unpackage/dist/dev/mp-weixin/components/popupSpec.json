@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "counter": "/components/counter"
-  },
-  "component": true
-}
