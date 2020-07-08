@@ -75,6 +75,6 @@
         "router" : {
             "mode" : "hash"
         },
-        "domain" : "172.18.1.23:5000"
+        "domain" : "2vcrbs.natappfree.cc"
     }
 }

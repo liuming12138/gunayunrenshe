@@ -1,7 +1,11 @@
 <template>
 	<view>
 		<view class="app-1"><image src="../../static/img/login/1.png" mode=""></image></view>
-		<view class="btn"><view class="">微信登录</view></view>
+		<view class="btn">
+			<view class="">
+				<button type="default" open-type="getUserInfo" @tap="loginMP">微信登录</button>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -9,6 +13,12 @@
 export default {
 	data() {
 		return {};
+	},
+	onLoad() {
+		
+	},
+	methods:{
+		
 	}
 };
 </script>
@@ -25,10 +35,10 @@ export default {
 		height: 260upx;
 	}
 }
-.btn{
+.btn {
 	padding: 20upx 40upx;
-	view{
-		background-color: #07C160;
+	view {
+		background-color: #07c160;
 		height: 88upx;
 		font-size: 36upx;
 		color: #fff;

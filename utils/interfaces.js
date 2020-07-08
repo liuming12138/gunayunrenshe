@@ -21,10 +21,12 @@ const interfaces = {
 	// 编辑未完成仲裁信息
 	incomCaseDec: domain + "arbitrationApp/info",
 	// 新增与更新未完成仲裁信息
-	incomCaseUpdate: domain + "arbitrationApp/arbitration",	
+	incomCaseUpdate: domain + "arbitrationApp/arbitration",
 	// 删除未完成仲裁信息
 	incomCaseDelete: domain + "arbitrationApp/deletes",
 	// 新增监察信息
-	incomMonitorUpdate: domain + "/monitorApp/monitor",	
+	incomMonitorUpdate: domain + "/monitorApp/monitor",
+	// 微信授权
+	weixnAuthor: "http://2vcrbs.natappfree.cc/weixin",
 }
 module.exports = interfaces;

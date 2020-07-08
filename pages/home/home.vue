@@ -43,20 +43,56 @@
 </template>
 
 <script>
+import interfaces from '../../utils/interfaces.js';
 export default {
 	data() {
 		return {};
 	},
-	onLoad() {},
+	onLoad() {
+		getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
+		var code = this.GetQueryString('code');
+		if (!getApp().globalData.userInfo) {
+			this.onGetInfo();
+		} else {
+			if (code) {
+				this.request({
+					url: interfaces.weixnAuthor,
+					data: {
+						code: code
+					},
+					success: res => {		
+						uni.setStorageSync('gyrs_users', res.data.data);
+						getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
+						console.log(getApp().globalData.userInfo);
+					}
+				});
+			} else {
+				this.onGetInfo();
+			}
+		}
+		console.log(code);
+	},
+	onShow() {},
 	methods: {
+		GetQueryString(name) {
+			var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		},
+		onGetInfo() {
+			uni.setStorageSync('gyrs_users', { author_gy: '已授权' });
+			let APPID = 'wx0cc79b13c9e6cf40';
+			let REDIRECT_URI = encodeURIComponent('http://2vcrbs.natappfree.cc');
+			let SCOPE = 'snsapi_userinfo';
+			location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${APPID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=${SCOPE}&state=STATE#wechat_redirect `;
+		},
 		onloped() {
 			uni.showModal({
 				title: '提示',
 				content: '功能暂未开发',
 				showCancel: false,
-				success: function(res) {
-					
-				}
+				success: function(res) {}
 			});
 		}
 	}
