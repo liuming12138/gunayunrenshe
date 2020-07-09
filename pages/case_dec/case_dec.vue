@@ -181,8 +181,8 @@ export default {
 			data: '',
 			way: 1,
 			caseInfo: {},
-			url1: 'http://172.18.1.23/upload/20200622/4028298172caa3340172caa6b4b90000back.zip',
-			url2: 'http://172.18.1.23/upload/20200622/4028298172caa3340172caa6b4b90000back.zip'
+			url1: 'http://zc.gyxrs.cn/upload/20200709/ff808081733184cf0173319cf6df0002_1_app.zip',
+			url2: 'http://zc.gyxrs.cn/upload/20200709/ff808081733184cf0173319cf6df0002_1_app.zip'
 		};
 	},
 	components: { uniSteps },
@@ -247,30 +247,40 @@ export default {
 			this.way = val;
 		},
 		onDownLoad(fileName) {
-			const downloadTask = uni.downloadFile({
-				url: fileName,
-				success: res => {
-					let that = this;
-					console.log('下载成功', res.tempFilePath);
-					uni.openDocument({
-						filePath: escape(res.tempFilePath),
-						success: res => {
-							console.log('打开文件成功');
-						},
-						fail() {
-							uni.showToast({
-								title: '暂不支持此类型',
-								duration: 2000
-							});
-						}
-					});
-				}
-			});
-			downloadTask.onProgressUpdate(res => {
-				console.log('下载进度' + res.progress);
-				console.log('已经下载的数据长度' + res.totalBytesWritten);
-				console.log('预期需要下载的数据总长度' + res.totalBytesExpectedToWrite);
-			});
+			// #ifdef H5
+			var oa = document;
+			var oA = document.createElement('a');
+			oA.download = ''; // 设置下载的文件名，默认是'下载'
+			oA.href = fileName;
+			document.body.appendChild(oA);
+			oA.click();
+			oA.remove();
+			// #endif
+
+			// const downloadTask = uni.downloadFile({
+			// 	url: fileName,
+			// 	success: res => {
+			// 		let that = this;
+			// 		console.log('下载成功', res.tempFilePath);
+			// 		uni.openDocument({
+			// 			filePath: escape(res.tempFilePath),
+			// 			success: res => {
+			// 				console.log('打开文件成功');
+			// 			},
+			// 			fail() {
+			// 				uni.showToast({
+			// 					title: '暂不支持此类型',
+			// 					duration: 2000
+			// 				});
+			// 			}
+			// 		});
+			// 	}
+			// });
+			// downloadTask.onProgressUpdate(res => {
+			// 	console.log('下载进度' + res.progress);
+			// 	console.log('已经下载的数据长度' + res.totalBytesWritten);
+			// 	console.log('预期需要下载的数据总长度' + res.totalBytesExpectedToWrite);
+			// });
 		},
 		loadData(id) {
 			var _this = this;

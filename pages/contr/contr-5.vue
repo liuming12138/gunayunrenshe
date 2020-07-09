@@ -122,7 +122,7 @@ export default {
 
 					_this._.each(tempFiles, (p, index) => {
 						if (p.size / (1024 * 1024) > 1) {
-							_this.onCompression(tempFiles, function(data, files) {
+							_this.onCompression(tempFiles[index], function(data, files) {
 								_this.onUpImage(data);
 							});
 						} else {
@@ -142,8 +142,8 @@ export default {
 				image.onload = function() {
 					let canvas = document.createElement('canvas'), // 新建canvas
 						context = canvas.getContext('2d'),
-						imageWidth = image.width / 2, //压缩后图片的大小
-						imageHeight = image.height / 2,
+						imageWidth = image.width / 4, //压缩后图片的大小
+						imageHeight = image.height / 4,
 						data = '';
 					canvas.width = imageWidth;
 					canvas.height = imageHeight;
@@ -173,6 +173,9 @@ export default {
 					console.log(JSON.parse(res1.data).data);
 					let url = JSON.parse(res1.data).data.url;
 					_this.fromData.imgUrl.push(url);
+				},
+				fail(e){
+					console.log(e)
 				}
 			});
 		}

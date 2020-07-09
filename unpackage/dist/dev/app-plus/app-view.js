@@ -6597,25 +6597,27 @@ var render = function() {
                                         1
                                       )
                                     : _vm._e(),
-                                  _vm._$g(123, "i")
-                                    ? _c(
-                                        "v-uni-view",
-                                        { attrs: { _i: 123 } },
-                                        [
-                                          _c(
-                                            "v-uni-button",
-                                            {
-                                              attrs: {
-                                                type: "default",
-                                                _i: 124
-                                              }
-                                            },
-                                            [_vm._v("提交")]
-                                          )
-                                        ],
-                                        1
+                                  _c(
+                                    "v-uni-view",
+                                    { attrs: { _i: 123 } },
+                                    [
+                                      _c(
+                                        "v-uni-button",
+                                        {
+                                          attrs: { type: "default", _i: 124 },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.$handleViewEvent(
+                                                $event
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [_vm._v("提交")]
                                       )
-                                    : _vm._e()
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
@@ -7288,7 +7290,27 @@ var render = function() {
       _c(
         "v-uni-view",
         { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
-        [_c("v-uni-view", { attrs: { _i: 4 } }, [_vm._v("微信登录")])],
+        [
+          _c(
+            "v-uni-view",
+            { attrs: { _i: 4 } },
+            [
+              _c(
+                "v-uni-button",
+                {
+                  attrs: { type: "default", "open-type": "getUserInfo", _i: 5 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("微信登录")]
+              )
+            ],
+            1
+          )
+        ],
         1
       )
     ],
@@ -7383,7 +7405,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../开发工具/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.app-1 {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  height: 500upx;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  padding: 150upx 0 50upx;\n}\n.app-1 uni-image {\r\n  width: 340upx;\r\n  height: 260upx;\n}\n.btn {\r\n  padding: 20upx 40upx;\n}\n.btn uni-view {\r\n  background-color: #07C160;\r\n  height: 88upx;\r\n  font-size: 36upx;\r\n  color: #fff;\r\n  text-align: center;\r\n  line-height: 88upx;\r\n  border-radius: 88upx;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.app-1 {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  height: 500upx;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  padding: 150upx 0 50upx;\n}\n.app-1 uni-image {\r\n  width: 340upx;\r\n  height: 260upx;\n}\n.btn {\r\n  padding: 20upx 40upx;\n}\n.btn uni-view {\r\n  background-color: #07c160;\r\n  height: 88upx;\r\n  font-size: 36upx;\r\n  color: #fff;\r\n  text-align: center;\r\n  line-height: 88upx;\r\n  border-radius: 88upx;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -13388,7 +13410,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! @/static/iconfont/ic
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*每个页面公共css */\n@font-face {\n  font-family: \"iconfont\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.icon-appreciate:before {\n  content: \"\\e644\";\n}\n.icon-emoji:before {\n  content: \"\\e64a\";\n}\n.icon-favorfill:before {\n  content: \"\\e64b\";\n}\n.icon-favor:before {\n  content: \"\\e64c\";\n}\n.icon-loading:before {\n  content: \"\\e64f\";\n}\n.icon-locationfill:before {\n  content: \"\\e650\";\n}\n.icon-location:before {\n  content: \"\\e651\";\n}\n.icon-roundcheckfill:before {\n  content: \"\\e656\";\n}\n.icon-roundcheck:before {\n  content: \"\\e657\";\n}\n.icon-search:before {\n  content: \"\\e65c\";\n}\n.icon-likefill:before {\n  content: \"\\e668\";\n}\n.icon-like:before {\n  content: \"\\e669\";\n}\n.icon-back:before {\n  content: \"\\e679\";\n}\n.icon-cascades:before {\n  content: \"\\e67c\";\n}\n.icon-settings:before {\n  content: \"\\e68a\";\n}\n.icon-pic:before {\n  content: \"\\e69b\";\n}\n.icon-right:before {\n  content: \"\\e6a3\";\n}\n.icon-deletefill:before {\n  content: \"\\e6a6\";\n}\n.icon-cart:before {\n  content: \"\\e6af\";\n}\n.icon-delete:before {\n  content: \"\\e6b4\";\n}\n.icon-lock:before {\n  content: \"\\e6c0\";\n}\n.icon-unlock:before {\n  content: \"\\e6c2\";\n}\n.icon-share:before {\n  content: \"\\e6f3\";\n}\n.icon-notice:before {\n  content: \"\\e70a\";\n}\n.icon-markfill:before {\n  content: \"\\e730\";\n}\n.icon-mark:before {\n  content: \"\\e731\";\n}\n.icon-radiobox:before {\n  content: \"\\e75b\";\n}\n.icon-radioboxfill:before {\n  content: \"\\e763\";\n}\n.icon-add:before {\n  content: \"\\e767\";\n}\n.icon-move:before {\n  content: \"\\e768\";\n}\n.icon-my_light:before {\n  content: \"\\e7d5\";\n}\n.icon-share_light:before {\n  content: \"\\e7e0\";\n}\n.icon-more_android_light:before {\n  content: \"\\e7e3\";\n}\n.icon-video_light:before {\n  content: \"\\e7e9\";\n}\n.icon-qr_code_light:before {\n  content: \"\\e7f8\";\n}\n.icon-ren:before {\n  content: \"\\e605\";\n}\nbody{\n\tposition: relative;\n\tbackground-color: #fff;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*每个页面公共css */\n@font-face {\n  font-family: \"iconfont\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.icon-appreciate:before {\n  content: \"\\e644\";\n}\n.icon-emoji:before {\n  content: \"\\e64a\";\n}\n.icon-favorfill:before {\n  content: \"\\e64b\";\n}\n.icon-favor:before {\n  content: \"\\e64c\";\n}\n.icon-loading:before {\n  content: \"\\e64f\";\n}\n.icon-locationfill:before {\n  content: \"\\e650\";\n}\n.icon-location:before {\n  content: \"\\e651\";\n}\n.icon-roundcheckfill:before {\n  content: \"\\e656\";\n}\n.icon-roundcheck:before {\n  content: \"\\e657\";\n}\n.icon-search:before {\n  content: \"\\e65c\";\n}\n.icon-likefill:before {\n  content: \"\\e668\";\n}\n.icon-like:before {\n  content: \"\\e669\";\n}\n.icon-back:before {\n  content: \"\\e679\";\n}\n.icon-cascades:before {\n  content: \"\\e67c\";\n}\n.icon-settings:before {\n  content: \"\\e68a\";\n}\n.icon-pic:before {\n  content: \"\\e69b\";\n}\n.icon-right:before {\n  content: \"\\e6a3\";\n}\n.icon-deletefill:before {\n  content: \"\\e6a6\";\n}\n.icon-cart:before {\n  content: \"\\e6af\";\n}\n.icon-delete:before {\n  content: \"\\e6b4\";\n}\n.icon-lock:before {\n  content: \"\\e6c0\";\n}\n.icon-unlock:before {\n  content: \"\\e6c2\";\n}\n.icon-share:before {\n  content: \"\\e6f3\";\n}\n.icon-notice:before {\n  content: \"\\e70a\";\n}\n.icon-markfill:before {\n  content: \"\\e730\";\n}\n.icon-mark:before {\n  content: \"\\e731\";\n}\n.icon-radiobox:before {\n  content: \"\\e75b\";\n}\n.icon-radioboxfill:before {\n  content: \"\\e763\";\n}\n.icon-add:before {\n  content: \"\\e767\";\n}\n.icon-move:before {\n  content: \"\\e768\";\n}\n.icon-my_light:before {\n  content: \"\\e7d5\";\n}\n.icon-share_light:before {\n  content: \"\\e7e0\";\n}\n.icon-more_android_light:before {\n  content: \"\\e7e3\";\n}\n.icon-video_light:before {\n  content: \"\\e7e9\";\n}\n.icon-qr_code_light:before {\n  content: \"\\e7f8\";\n}\n.icon-ren:before {\n  content: \"\\e605\";\n}\nbody{\n\tposition: relative;\n\tbackground-color: #fff;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

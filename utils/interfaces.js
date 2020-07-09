@@ -27,6 +27,6 @@ const interfaces = {
 	// 新增监察信息
 	incomMonitorUpdate: domain + "/monitorApp/monitor",
 	// 微信授权
-	weixnAuthor: "http://2vcrbs.natappfree.cc/weixin",
+	weixnAuthor: "http://e5ckqv.natappfree.cc/weixin",
 }
 module.exports = interfaces;

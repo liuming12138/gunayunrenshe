@@ -49,28 +49,28 @@ export default {
 		return {};
 	},
 	onLoad() {
-		getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
-		var code = this.GetQueryString('code');
-		if (!getApp().globalData.userInfo) {
-			this.onGetInfo();
-		} else {
-			if (code) {
-				this.request({
-					url: interfaces.weixnAuthor,
-					data: {
-						code: code
-					},
-					success: res => {		
-						uni.setStorageSync('gyrs_users', res.data.data);
-						getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
-						console.log(getApp().globalData.userInfo);
-					}
-				});
-			} else {
-				this.onGetInfo();
-			}
-		}
-		console.log(code);
+		// getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
+		// var code = this.GetQueryString('code');
+		// if (!getApp().globalData.userInfo) {
+		// 	this.onGetInfo();
+		// } else {
+		// 	if (code) {
+		// 		this.request({
+		// 			url: interfaces.weixnAuthor,
+		// 			data: {
+		// 				code: code
+		// 			},
+		// 			success: res => {		
+		// 				uni.setStorageSync('gyrs_users', res.data.data);
+		// 				getApp().globalData.userInfo = uni.getStorageSync('gyrs_users');
+		// 				console.log(getApp().globalData.userInfo);
+		// 			}
+		// 		});
+		// 	} else {
+		// 		this.onGetInfo();
+		// 	}
+		// }
+		// console.log(code);
 	},
 	onShow() {},
 	methods: {
@@ -82,8 +82,8 @@ export default {
 		},
 		onGetInfo() {
 			uni.setStorageSync('gyrs_users', { author_gy: '已授权' });
-			let APPID = 'wx0cc79b13c9e6cf40';
-			let REDIRECT_URI = encodeURIComponent('http://2vcrbs.natappfree.cc');
+			let APPID = 'wx7349f23da5971cb9';//wx0cc79b13c9e6cf40
+			let REDIRECT_URI = encodeURIComponent('http://e5ckqv.natappfree.cc');
 			let SCOPE = 'snsapi_userinfo';
 			location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${APPID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=${SCOPE}&state=STATE#wechat_redirect `;
 		},
